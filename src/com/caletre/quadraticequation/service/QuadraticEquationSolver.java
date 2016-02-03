@@ -1,6 +1,6 @@
 package com.caletre.quadraticequation.service;
 
-import com.caletre.quadraticequation.model.QuadraticSolution;
+import com.caletre.quadraticequation.model.QuadraticResult;
 
 /**
  * Represents a solver for the quadratic equation
@@ -16,5 +16,5 @@ public interface QuadraticEquationSolver {
 	 * @param c constant of the polynomial expression
 	 * @throws IllegalArgumentException when a is 0
 	 */
-	QuadraticSolution solve(int a, int b, int c);
+	QuadraticResult solve(int a, int b, int c);
 }
