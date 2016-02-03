@@ -8,8 +8,8 @@ import com.caletre.quadraticequation.service.QuadraticEquationSolver;
  * @see QuadraticEquationSolver
  */
 public class QuadraticResult {
-	private int negativeResult;
-	private int positiveResult;
+	private double negativeResult;
+	private double positiveResult;
 	
 	/**
 	 * Retrieves the calculated number of the quadratic equation when doing it
@@ -18,7 +18,7 @@ public class QuadraticResult {
 	 * @return a number calculated when the quadratic equation was evaluated
 	 * with the negative sign
 	 */
-	public int getNegativeResult() {
+	public double getNegativeResult() {
 		return negativeResult;
 	}
 	
@@ -28,7 +28,7 @@ public class QuadraticResult {
 	 * @param negativeResult the resultant number when the quadratic equation
 	 * is evaluated with the minus sign
 	 */
-	public void setNegativeResult(int negativeSolution) {
+	public void setNegativeResult(double negativeSolution) {
 		this.negativeResult = negativeSolution;
 	}
 	
@@ -39,7 +39,7 @@ public class QuadraticResult {
 	 * @return a number calculated when the quadratic equation was evaluated
 	 * with the negative sign
 	 */
-	public int getPositiveResult() {
+	public double getPositiveResult() {
 		return positiveResult;
 	}
 	
@@ -49,7 +49,7 @@ public class QuadraticResult {
 	 * @param positiveSolution the resultant number when the quadratic equation
 	 * is evaluated with the plus sign
 	 */
-	public void setPositiveResult(int positiveSolution) {
+	public void setPositiveResult(double positiveSolution) {
 		this.positiveResult = positiveSolution;
 	}
 }
