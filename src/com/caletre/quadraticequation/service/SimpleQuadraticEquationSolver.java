@@ -12,7 +12,13 @@ public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 
 	@Override
 	public QuadraticResult solve(double a, double b, double c) {
-		if(b * b - 4 * a * c < 0) {
+		if(a == 0) {
+			return null;
+		}
+		
+		double sqrtInnerExpressionValue = (b * b) - (4 * a * c);
+		
+		if(sqrtInnerExpressionValue < 0) {
 			QuadraticResult result = new QuadraticResult();
 			result.setNegativeResult(0);
 			result.setPositiveResult(0);
@@ -20,13 +26,11 @@ public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 			return result;
 		}
 		
-		if(a == 0) {
-			return null;
-		}
-		
 		QuadraticResult result = new QuadraticResult();
-		result.setNegativeResult((-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a));
-		result.setPositiveResult((-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a));
+		double sqrtExpressionValue = Math.sqrt(sqrtInnerExpressionValue);
+		double denominatorValue = 2 * a;
+		result.setNegativeResult((-b - sqrtExpressionValue) / denominatorValue);
+		result.setPositiveResult((-b + sqrtExpressionValue) / denominatorValue);
 		
 		return result;
 	}
