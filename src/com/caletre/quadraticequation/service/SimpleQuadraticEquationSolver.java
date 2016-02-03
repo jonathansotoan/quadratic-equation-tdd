@@ -16,6 +16,11 @@ public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 			return null;
 		}
 		
+		if(Double.isNaN(a) || Double.isNaN(b) || Double.isNaN(c)){
+			throw new IllegalArgumentException(
+					"NaN is not allowed for this operation");
+		}
+		
 		double sqrtInnerExpressionValue = (b * b) - (4 * a * c);
 		
 		if(sqrtInnerExpressionValue < 0) {
