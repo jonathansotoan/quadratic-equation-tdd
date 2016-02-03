@@ -11,7 +11,7 @@ import com.caletre.quadraticequation.model.QuadraticResult;
 public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 
 	@Override
-	public QuadraticResult solve(int a, int b, int c) {
+	public QuadraticResult solve(double a, double b, double c) {
 		// TODO Implement this method
 		return new QuadraticResult();
 	}
