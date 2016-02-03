@@ -121,4 +121,15 @@ public class SimpleQuadraticEquationSolverTest {
 		// Act
 		simpleQuadraticEquationSolver.solve(1, Double.NaN, 1);
 	}
+
+	// Assert
+	@Test(expected = IllegalArgumentException.class)
+	public void testCIsNotANumberThrowsAnException(){
+		// Arrange
+		QuadraticEquationSolver simpleQuadraticEquationSolver =
+				new SimpleQuadraticEquationSolver();
+		
+		// Act
+		simpleQuadraticEquationSolver.solve(1, 1, Double.NaN);
+	}
 }
