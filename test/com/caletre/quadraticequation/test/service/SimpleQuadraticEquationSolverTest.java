@@ -39,4 +39,20 @@ public class SimpleQuadraticEquationSolverTest {
 		assertEquals(0, quadraticResult.getNegativeResult());
 		assertEquals(0, quadraticResult.getPositiveResult());
 	}
+	
+	@Test
+	public void testSquareRootBeingZeroCalculatesSameResult(){
+		// Arrange
+		QuadraticEquationSolver simpleQuadraticEquationSolver =
+				new SimpleQuadraticEquationSolver();
+		
+		// Act
+		QuadraticResult quadraticResult =
+				simpleQuadraticEquationSolver.solve(1, 2, 1);
+		
+		// Assert
+		assertNotNull(quadraticResult);
+		assertEquals(-1, quadraticResult.getNegativeResult());
+		assertEquals(-1, quadraticResult.getPositiveResult());
+	}
 }
