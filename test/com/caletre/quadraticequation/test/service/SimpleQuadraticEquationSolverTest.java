@@ -2,6 +2,7 @@ package com.caletre.quadraticequation.test.service;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import com.caletre.quadraticequation.model.QuadraticResult;
 import com.caletre.quadraticequation.service.QuadraticEquationSolver;
@@ -9,7 +10,6 @@ import com.caletre.quadraticequation.service.SimpleQuadraticEquationSolver;
 
 // TODO Implement all the test cases for the SimpleQuadraticEquationSolver class
 public class SimpleQuadraticEquationSolverTest {
-	
 	@Test
 	public void testABeingZeroReturnsNull(){
 		// Arrange
@@ -22,5 +22,21 @@ public class SimpleQuadraticEquationSolverTest {
 		
 		// Assert
 		assertEquals(null, quadraticResult);
+	}
+	
+	@Test
+	public void testSquareRootBeingNegativeReturnsZeroInBothResults(){
+		// Arrange
+		QuadraticEquationSolver simpleQuadraticEquationSolver =
+				new SimpleQuadraticEquationSolver();
+		
+		// Act
+		QuadraticResult quadraticResult =
+				simpleQuadraticEquationSolver.solve(1, 2, 2);
+		
+		// Assert
+		assertNotNull(quadraticResult);
+		assertEquals(0, quadraticResult.getNegativeResult());
+		assertEquals(0, quadraticResult.getPositiveResult());
 	}
 }
