@@ -55,4 +55,26 @@ public class SimpleQuadraticEquationSolverTest {
 		assertEquals(-1, quadraticResult.getNegativeResult(), 0);
 		assertEquals(-1, quadraticResult.getPositiveResult(), 0);
 	}
+
+	@Test
+	public void testEquallyBigNumbersCalculatesWell(){
+		// Arrange
+		QuadraticEquationSolver simpleQuadraticEquationSolver =
+				new SimpleQuadraticEquationSolver();
+		
+		// Act
+		QuadraticResult quadraticResult1 =
+				simpleQuadraticEquationSolver.solve(6703, 9841790, 3151638);
+		QuadraticResult quadraticResult2 =
+				simpleQuadraticEquationSolver.solve(15613, 25161353, 13513612);
+		
+		// Assert
+		assertNotNull(quadraticResult1);
+		assertEquals(-1467.9461478, quadraticResult1.getNegativeResult(), 0.01);
+		assertEquals(-0.3203000343, quadraticResult1.getPositiveResult(), 0.01);
+		
+		assertNotNull(quadraticResult2);
+		assertEquals(-1611.0270161, quadraticResult2.getNegativeResult(), 0.01);
+		assertEquals(-0.5372572222, quadraticResult2.getPositiveResult(), 0.01);
+	}
 }
