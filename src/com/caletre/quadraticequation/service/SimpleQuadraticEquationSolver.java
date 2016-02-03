@@ -13,6 +13,6 @@ public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 	@Override
 	public QuadraticResult solve(int a, int b, int c) {
 		// TODO Implement this method
-		return new QuadraticResult();
+		return null;
 	}
 }
