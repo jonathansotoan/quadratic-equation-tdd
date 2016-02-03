@@ -12,7 +12,14 @@ public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 
 	@Override
 	public QuadraticResult solve(int a, int b, int c) {
-		// TODO Implement this method
-		return null;
+		if(b * b - 4 * a * c < 0) {
+			QuadraticResult result = new QuadraticResult();
+			result.setNegativeResult(0);
+			result.setPositiveResult(0);
+			
+			return result;
+		} else {
+			return null;
+		}
 	}
 }
