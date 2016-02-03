@@ -77,4 +77,26 @@ public class SimpleQuadraticEquationSolverTest {
 		assertEquals(-1611.0270161, quadraticResult2.getNegativeResult(), 0.01);
 		assertEquals(-0.5372572222, quadraticResult2.getPositiveResult(), 0.01);
 	}
+
+	@Test
+	public void testEquallySmallNumbersCalculatesWell(){
+		// Arrange
+		QuadraticEquationSolver simpleQuadraticEquationSolver =
+				new SimpleQuadraticEquationSolver();
+		
+		// Act
+		QuadraticResult quadraticResult1 =
+				simpleQuadraticEquationSolver.solve(0.6703, 9.841790, 31.51638);
+		QuadraticResult quadraticResult2 =
+				simpleQuadraticEquationSolver.solve(0.05613, 10.0251613, 1.135);
+		
+		// Assert
+		assertNotNull(quadraticResult1);
+		assertEquals(-9.9637049993, quadraticResult1.getNegativeResult(), 0.01);
+		assertEquals(-4.7189594792, quadraticResult1.getPositiveResult(), 0.01);
+		
+		assertNotNull(quadraticResult2);
+		assertEquals(-178.49283011, quadraticResult2.getNegativeResult(), 0.01);
+		assertEquals(-0.1132869915, quadraticResult2.getPositiveResult(), 0.01);
+	}
 }
