@@ -11,7 +11,7 @@ import com.caletre.quadraticequation.model.QuadraticResult;
 public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 
 	@Override
-	public QuadraticResult solve(int a, int b, int c) {
+	public QuadraticResult solve(double a, double b, double c) {
 		if(b * b - 4 * a * c < 0) {
 			QuadraticResult result = new QuadraticResult();
 			result.setNegativeResult(0);

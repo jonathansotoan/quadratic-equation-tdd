@@ -16,5 +16,5 @@ public interface QuadraticEquationSolver {
 	 * @param c constant of the polynomial expression
 	 * @throws IllegalArgumentException when a is 0
 	 */
-	QuadraticResult solve(int a, int b, int c);
+	QuadraticResult solve(double a, double b, double c);
 }
