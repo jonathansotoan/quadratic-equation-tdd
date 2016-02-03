@@ -1,4 +1,4 @@
-package com.caletre.quadraticequation.test;
+package com.caletre.quadraticequation.test.service;
 
 import org.junit.Test;
 
