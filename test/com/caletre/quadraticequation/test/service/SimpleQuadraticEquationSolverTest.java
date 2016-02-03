@@ -1,14 +1,14 @@
 package com.caletre.quadraticequation.test.service;
 
-import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+
+import org.junit.Test;
 
 import com.caletre.quadraticequation.model.QuadraticResult;
 import com.caletre.quadraticequation.service.QuadraticEquationSolver;
 import com.caletre.quadraticequation.service.SimpleQuadraticEquationSolver;
 
-// TODO Implement all the test cases for the SimpleQuadraticEquationSolver class
 public class SimpleQuadraticEquationSolverTest {
 	@Test
 	public void testABeingZeroReturnsNull(){
@@ -98,5 +98,16 @@ public class SimpleQuadraticEquationSolverTest {
 		assertNotNull(quadraticResult2);
 		assertEquals(-178.49283011, quadraticResult2.getNegativeResult(), 0.01);
 		assertEquals(-0.1132869915, quadraticResult2.getPositiveResult(), 0.01);
+	}
+
+	// Assert
+	@Test(expected = IllegalArgumentException.class)
+	public void testAIsNotANumberThrowsAnException(){
+		// Arrange
+		QuadraticEquationSolver simpleQuadraticEquationSolver =
+				new SimpleQuadraticEquationSolver();
+		
+		// Act
+		simpleQuadraticEquationSolver.solve(Double.NaN, 1, 1);
 	}
 }
