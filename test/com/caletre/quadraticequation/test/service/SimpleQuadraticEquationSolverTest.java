@@ -36,8 +36,8 @@ public class SimpleQuadraticEquationSolverTest {
 		
 		// Assert
 		assertNotNull(quadraticResult);
-		assertEquals(0, quadraticResult.getNegativeResult());
-		assertEquals(0, quadraticResult.getPositiveResult());
+		assertEquals(0, quadraticResult.getNegativeResult(), 0);
+		assertEquals(0, quadraticResult.getPositiveResult(), 0);
 	}
 	
 	@Test
@@ -52,7 +52,7 @@ public class SimpleQuadraticEquationSolverTest {
 		
 		// Assert
 		assertNotNull(quadraticResult);
-		assertEquals(-1, quadraticResult.getNegativeResult());
-		assertEquals(-1, quadraticResult.getPositiveResult());
+		assertEquals(-1, quadraticResult.getNegativeResult(), 0);
+		assertEquals(-1, quadraticResult.getPositiveResult(), 0);
 	}
 }

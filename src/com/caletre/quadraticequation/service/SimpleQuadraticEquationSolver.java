@@ -18,8 +18,16 @@ public class SimpleQuadraticEquationSolver implements QuadraticEquationSolver {
 			result.setPositiveResult(0);
 			
 			return result;
-		} else {
+		}
+		
+		if(a == 0) {
 			return null;
 		}
+		
+		QuadraticResult result = new QuadraticResult();
+		result.setNegativeResult((-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a));
+		result.setPositiveResult((-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a));
+		
+		return result;
 	}
 }
