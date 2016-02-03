@@ -6,7 +6,7 @@ import org.junit.Test;
 public class SimpleQuadraticEquationSolverTest {
 	
 	@Test
-	public void testABeingZeroThrowsAnException(){
+	public void testABeingZeroReturnsNull(){
  
 	}
 }
